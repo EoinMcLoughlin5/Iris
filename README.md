@@ -160,10 +160,11 @@ Dataset Order    Sepal length    Sepal width    Petal length    Petal width    F
 
 To further incestigate the data, I will be using several python based programs which are "Pandas","NumPy", and"Holoviews".  Pandas will be used for data maninulation and analysis, NumPy will be used as a library that contains a large collection of high level mathematical funcations and Holoviews will be used to make the data analysis and visualization easy.
 
+```
 import pandas as pd
 import numpy as np
 import seaborn as sns
-
+```
 
 # Data Import
 
@@ -189,12 +190,13 @@ Investigating the Irish Data
 
 The data is analysed by using the Min,Max,Mean,Median and standard deviation
 
-
+```
 iris_data.min()
 iris_data.max()
 iris_data.mean()
 iris_data.median()
 iris_data.std()
+```
 
 # Summary Statistics Table
 
@@ -204,6 +206,7 @@ summary = iris_data.describe()
 summary = summary.transpose()
 summary.head()
 
+```
 	Id	SepalLengthCm	SepalWidthCm	PetalLengthCm	PetalWidthCm
 count	150.000000	150.000000	150.000000	150.000000	150.000000
 mean	75.500000	5.843333	3.054000	3.758667	1.198667
@@ -214,22 +217,27 @@ min	1.000000	4.300000	2.000000	1.000000	0.100000
 75%	112.750000	6.400000	3.300000	5.100000	1.800000
 max	150.000000	7.900000	4.400000	6.900000	2.500000
 
-Boxplots
+```
+
+# Boxplots
+
 The Boxplots are used to summarise the data length through each of the measurements. Each of the plots will be based on Sepal length, Sepal Width, Petal Length and Petal Width. Based on the data, we can see there are distinct differences between the lenghts and widths of each of the species.
 
-# build the box plot
-boxplot(Sepal.Length ~ Species, data=iris,
+build the box plot
+```
+(Sepal.Length ~ Species, data=iris,
      main="Box Plot",
      xlab="Species",
      ylab="Sepal Length")
-
+```
  
  
 
-Histogram
+# Histogram
 The data can also be analysed by the use of a histogram
 
-# histograms
+
+```
 import matplotlib.pyplot as plt
 from sklearn import datasets
 iris= datasets.load_iris()
@@ -246,14 +254,16 @@ for i, ax in enumerate(axes.flat):
 
 
 plt.show()
-
+```
 
  
 
 # Scatterplot
 The scatterplot of the statistics is used to spot the structured relationships between the input variables.
 
-# scatter plot matrix
+
+scatter plot matrix
+```
 import matplotlib.pyplot as plt
 import seaborn as sns
 iris = sns.load_dataset("iris")
@@ -264,13 +274,13 @@ sns.lmplot(x="ID", y="ratio", data=iris, hue="species", fit_reg=False, legend=Fa
 
 plt.legend()
 plt.show()
-
+```
  
 
 
 # Pairplot
 The pairplot chart helps us to quickly see the relationship between the variables across multiple dimensions using scatterplots and histograms.
-
+ ```
 >>> import seaborn as sns; sns.set(style="ticks", color_codes=True)
 >>> iris = sns.load_dataset("iris")
 >>> g = sns.pairplot(iris)
@@ -282,7 +292,7 @@ g = sns.pairplot(iris, kind="reg")
 g = sns.pairplot(iris, hue="species")
  
 # Swarm Plots
-
+```
  
 # Violin Plot
 The Violin plot is used to help visualise the distribution of the dats and its density. The thick black bar in the center represents the interquartile range, the thin black line extended from it represents the 95% confidence intervals, and the white dot is the median.
@@ -308,6 +318,8 @@ from sklearn.decomposition import PCA
 
 
 # import some data to play with
+
+```
 iris = datasets.load_iris()
 X = iris.data[:, :2]  # we only take the first two features.
 y = iris.target
@@ -318,7 +330,7 @@ y_min, y_max = X[:, 1].min() - .5, X[:, 1].max() + .5
 plt.figure(2, figsize=(8, 6))
 plt.clf()
 
-# Plot the training points
+ Plot the training points
 plt.scatter(X[:, 0], X[:, 1], c=y, cmap=plt.cm.Set1,
             edgecolor='k')
 plt.xlabel('Sepal length')
@@ -345,7 +357,7 @@ ax.set_zlabel("3rd eigenvector")
 ax.w_zaxis.set_ticklabels([])
 
 plt.show()
- 
+``` 
 
  
 Using supervised learning with K-Nearest Neighbours(KNN), we are able to ask the algorithm "Based on these measurements, what is the species?"
