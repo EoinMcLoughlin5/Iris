@@ -6,7 +6,6 @@ The Iris flower data set is a set of infomation that was made by the satastician
 The length and width of the sepals and petals were measured in centimeters and the data was added in a table (fig 2). The table was split into 6 colums that included the "Dataset Order", "Sepal length (cm)",  "Sepal width (cm)", "Petal length (cm)", "Petal width (cm)" and "Flower Species". The result of all the data collected was a linear model that was able tell apart the different species from each other. 
 Fisher's Iris Data 
 
-`
 Dataset Order    Sepal length    Sepal width    Petal length    Petal width    Flower Species
 1	5.1	3.5	1.4	0.2	I. setosa
 2	4.9	3.0	1.4	0.2	I. setosa
@@ -304,6 +303,21 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from sklearn import datasets
 from sklearn.decomposition import PCA
+
+
+The boxplot is a quick way of visually summarizing one or more groups of numerical data through their quartiles. Comparing the distributions of:
+
+- Sepal Length
+- Sepal Width
+- Petal Length
+- Petal Width
+
+![Boxplot Petal Length](assets/boxplot-petal_length.png)
+![Boxplot Petal Width](assets/boxplot-petal_width.png)
+![Boxplot Sepal Length](assets/boxplot-sepal_length.png)
+![Boxplot Petal Width](assets/boxplot-sepal_width.png)
+
+From the Boxplot, we can see that there are distinct differences between the Petal Length, Petal Width and Sepal Length across the Species. 
 
 # import some data to play with
 iris = datasets.load_iris()
