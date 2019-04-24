@@ -163,8 +163,9 @@ To further incestigate the data, I will be using several python based programs w
 import pandas as pd
 import numpy as np
 import seaborn as sns
-#
-#Data Import
+
+
+# Data Import
 
 Next step is to import the iris.csv using the library from the pandas doftware and examine the first few rows of data.
 iris_data = pd.read_csv('assets/iris.csv')
@@ -195,7 +196,7 @@ iris_data.mean()
 iris_data.median()
 iris_data.std()
 
-Summary Statistics Table
+# Summary Statistics Table
 
 The resultimg table presents an easier way to present the data. The next step will be to use the box plots and scatter plots to see if each of the sizes are realated ti the species of iris flower.
 
@@ -249,7 +250,7 @@ plt.show()
 
  
 
-Scatterplot
+# Scatterplot
 The scatterplot of the statistics is used to spot the structured relationships between the input variables.
 
 # scatter plot matrix
@@ -267,7 +268,7 @@ plt.show()
  
 
 
-Pairplot
+# Pairplot
 The pairplot chart helps us to quickly see the relationship between the variables across multiple dimensions using scatterplots and histograms.
 
 >>> import seaborn as sns; sns.set(style="ticks", color_codes=True)
@@ -280,14 +281,14 @@ g = sns.pairplot(iris, kind="reg")
  
 g = sns.pairplot(iris, hue="species")
  
-Swarm Plots
+# Swarm Plots
 
  
-Violin Plot
+# Violin Plot
 The Violin plot is used to help visualise the distribution of the dats and its density. The thick black bar in the center represents the interquartile range, the thin black line extended from it represents the 95% confidence intervals, and the white dot is the median.
 
  
-Box Plot
+# Box Plot
  
 Scikit-Learn
 Once we collect all the data from the analysis, we then use Scikit-Learn to perform machine learning. The steps  to perform the learning are as follows.
@@ -355,7 +356,7 @@ The answer we get is "Virginica"
  
 
 
-Reference
+# Reference
 Background infomation: https://www.kaggle.com/arshid/iris-flower-dataset
 https://www.techopedia.com/definition/32880/iris-flower-data-set
 https://en.wikipedia.org/wiki/Iris_flower_data_set
