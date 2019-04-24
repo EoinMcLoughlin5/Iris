@@ -163,8 +163,9 @@ To further incestigate the data, I will be using several python based programs w
 import pandas as pd
 import numpy as np
 import seaborn as sns
+#
+#Data Import
 
-Data Import
 Next step is to import the iris.csv using the library from the pandas doftware and examine the first few rows of data.
 iris_data = pd.read_csv('assets/iris.csv')
 iris_data.columns = ['sepal_length', 'sepal_width' , 'petal_length', 'petal_width', 'species']
