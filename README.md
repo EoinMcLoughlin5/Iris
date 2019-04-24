@@ -292,11 +292,11 @@ The Violin plot is used to help visualise the distribution of the dats and its d
  
 Scikit-Learn
 Once we collect all the data from the analysis, we then use Scikit-Learn to perform machine learning. The steps  to perform the learning are as follows.
-⦁	Import data
-⦁	investigate data
-⦁	Perform supervised learning with K-Nearest Neighbours (KNN)
-⦁	Fitting the Model
-⦁	Predict the response.
+- Import data
+- Investigate data
+- Perform supervised learning with K-Nearest Neighbours (KNN)
+- Fitting the Model
+- Predict the response.
 
 
 import matplotlib.pyplot as plt
@@ -305,19 +305,7 @@ from sklearn import datasets
 from sklearn.decomposition import PCA
 
 
-The boxplot is a quick way of visually summarizing one or more groups of numerical data through their quartiles. Comparing the distributions of:
 
-- Sepal Length
-- Sepal Width
-- Petal Length
-- Petal Width
-
-![Boxplot Petal Length](assets/boxplot-petal_length.png)
-![Boxplot Petal Width](assets/boxplot-petal_width.png)
-![Boxplot Sepal Length](assets/boxplot-sepal_length.png)
-![Boxplot Petal Width](assets/boxplot-sepal_width.png)
-
-From the Boxplot, we can see that there are distinct differences between the Petal Length, Petal Width and Sepal Length across the Species. 
 
 # import some data to play with
 iris = datasets.load_iris()
