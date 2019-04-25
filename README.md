@@ -3,7 +3,7 @@
 
 The Iris flower data set is a set of infomation that was made by the satastician Ronald Fischer in 1936. The data set describes particular biological characteristics of several types of iris flowers reproductive systems. These involve the length and width of both petals and sepals.This data set is now commonly used as for testing purpose in computer science. In paper "The use of multiple measruements in taxonomic problems", Ronald Fischer took 50 samples from each of three species of Iris flowers from the Gaspe Peninsula "all from the same pasture, and picked on the same day and measured at the same time by the same person with the same apparatus". The 3 species of the Iris flowers were the  "Isis setosa", "Iris Virginica" and "Iris Versicolor" (fig 1).
 
-![iris](new-folder/irises.pgn)
+![image of flowers](https://cdn-images-1.medium.com/max/1200/1*2uGt_aWJoBjqF2qTzRc2JQ.jpeg)
 
 
 The length and width of the sepals and petals were measured in centimeters and the data was added in a table (fig 2). The table was split into 6 colums that included the "Dataset Order", "Sepal length (cm)",  "Sepal width (cm)", "Petal length (cm)", "Petal width (cm)" and "Flower Species". The result of all the data collected was a linear model that was able tell apart the different species from each other. 
