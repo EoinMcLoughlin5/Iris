@@ -278,7 +278,7 @@ for i, ax in enumerate(axes.flat):
 plt.show()
 ```
 
- 
+ ![Histogram image](https://i.stack.imgur.com/yH6H1.png)
 
 # Scatterplot
 The scatterplot of the statistics is used to spot the structured relationships between the input variables.
@@ -298,7 +298,7 @@ plt.legend()
 plt.show()
 ```
  
-
+![scatterplot images](https://i.stack.imgur.com/lHnhC.png)
 
 # Pairplot
 The pairplot chart helps us to quickly see the relationship between the variables across multiple dimensions using scatterplots and histograms.
@@ -307,22 +307,41 @@ The pairplot chart helps us to quickly see the relationship between the variable
 >>> iris = sns.load_dataset("iris")
 >>> g = sns.pairplot(iris)
 
- 
+```
+![pairplot 1](https://seaborn.pydata.org/_images/seaborn-pairplot-1.png)
+
+```
 Plotting regression and confidence intervals 
 g = sns.pairplot(iris, kind="reg")
- 
+```
+![pairplot 2](https://seaborn.pydata.org/_images/seaborn-pairplot-9.png)
+
+``` 
 g = sns.pairplot(iris, hue="species")
- 
+``` 
+![pairplot 3](https://seaborn.pydata.org/_images/seaborn-pairplot-2.png)
+
 # Swarm Plots
 ```
+sns.set()
+%matplotlib incline
+# Later in the course I shall explain why ablove 2 lines of code have been added
+
+sns.swarmplot(x="species", y="Petal_length", data=iris)
+```
+ ![swarm plots](https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Seaborn+Tutorial/Figure3.png)
+ 
  
 # Violin Plot
 The Violin plot is used to help visualise the distribution of the dats and its density. The thick black bar in the center represents the interquartile range, the thin black line extended from it represents the 95% confidence intervals, and the white dot is the median.
 
+ ![violin plot](https://cdn-images-1.medium.com/max/800/1*BqFBziMva6lNFkMjQuQH5Q.pn)
  
 # Box Plot
+
+![box plot](http://www.lac.inpe.br/~rafael.santos/Docs/R/CAP394/resources/interpret_boxplots.png)
  
-Scikit-Learn
+# Scikit-Learn
 Once we collect all the data from the analysis, we then use Scikit-Learn to perform machine learning. The steps  to perform the learning are as follows.
 - Import data
 - Investigate data
@@ -337,11 +356,10 @@ from sklearn import datasets
 from sklearn.decomposition import PCA
 
 
-
-
-# import some data to play with
-
 ```
+
+#import some data to play with
+
 iris = datasets.load_iris()
 X = iris.data[:, :2]  # we only take the first two features.
 y = iris.target
@@ -380,7 +398,8 @@ ax.w_zaxis.set_ticklabels([])
 
 plt.show()
 ``` 
-
+![sklearn 1](https://scikit-learn.org/stable/_images/sphx_glr_plot_iris_dataset_001.png)
+![sklearn 2](https://scikit-learn.org/stable/_images/sphx_glr_plot_iris_dataset_002.png)
  
 Using supervised learning with K-Nearest Neighbours(KNN), we are able to ask the algorithm "Based on these measurements, what is the species?"
 
