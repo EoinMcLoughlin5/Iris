@@ -392,6 +392,7 @@ https://medium.com/@neuralnets/data-visualization-with-python-and-seaborn-part-1
 http://rstudio-pubs-static.s3.amazonaws.com/321676_20be34434fe44ed2b229eadeabe0eb98.html
 http://www.lac.inpe.br/~rafael.santos/Docs/R/CAP394/WholeStory-Iris.html
 https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html
+https://scikit-learn.org/stable/auto_examples/linear_model/plot_iris_logistic.html#sphx-glr-auto-examples-linear-model-plot-iris-logistic-py
 
 Images: http://www.lac.inpe.br/~rafael.santos/Docs/R/CAP394/WholeStory-Iris.html
 
