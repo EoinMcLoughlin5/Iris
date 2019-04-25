@@ -409,7 +409,7 @@ knn.predict([[3, 5, 4, 2]])
 
 The answer we get is "Virginica"
 
- 
+ ![sklearn image 3](https://i.stack.imgur.com/49mxD.png)
 
 
 # Reference
