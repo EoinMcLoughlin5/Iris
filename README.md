@@ -6,7 +6,9 @@ The Iris flower data set is a set of infomation that was made by the satastician
 ![image of flowers](https://cdn-images-1.medium.com/max/1200/1*2uGt_aWJoBjqF2qTzRc2JQ.jpeg)
 
 
-The length and width of the sepals and petals were measured in centimeters and the data was added in a table (fig 2). The table was split into 6 colums that included the "Dataset Order", "Sepal length (cm)",  "Sepal width (cm)", "Petal length (cm)", "Petal width (cm)" and "Flower Species". The result of all the data collected was a linear model that was able tell apart the different species from each other. 
+The length and width of the sepals and petals were measured in centimeters and the data was added in a table (fig 2). The table was split into 6 colums that included the "Dataset Order", "Sepal length (cm)",  "Sepal width (cm)", "Petal length (cm)", "Petal width (cm)" and "Flower Species". The result of all the data collected was a linear model that was able tell apart the different species from each other.
+
+```
 Fisher's Iris Data 
 
 Dataset Order    Sepal length    Sepal width    Petal length    Petal width    Flower Species
@@ -160,6 +162,7 @@ Dataset Order    Sepal length    Sepal width    Petal length    Petal width    F
 148	6.5	3.0	5.2	2.0	I. virginica
 149	6.2	3.4	5.4	2.3	I. virginica
 150	5.9	3.0	5.1	1.8	I. virginica
+```
 
 To further incestigate the data, I will be using several python based programs which are "Pandas","NumPy", and"Holoviews".  Pandas will be used for data maninulation and analysis, NumPy will be used as a library that contains a large collection of high level mathematical funcations and Holoviews will be used to make the data analysis and visualization easy.
 
@@ -228,13 +231,29 @@ The Boxplots are used to summarise the data length through each of the measureme
 
 build the box plot
 ```
-(Sepal.Length ~ Species, data=iris,
-     main="Box Plot",
-     xlab="Species",
-     ylab="Sepal Length")
+data(iris)
+# create boxplots
+boxplot(Sepal.Length ~ Species, data = iris, ylim = c(0, 10), xlim = c(0, 12), at = 1:3, outline = FALSE, col = c(6, 5, 7), las = 2)
+boxplot(Sepal.Width ~ Species, data = iris, at = 4:6, add = TRUE, outline = FALSE, col = c(6, 5, 7), las = 2)
+boxplot(Petal.Length ~ Species, data = iris, at = 7:9, add = TRUE, outline = FALSE, col = c(6, 5, 7), las = 2)
+boxplot(Petal.Width ~ Species, data = iris, at = 10:12, add = TRUE, outline = FALSE, col = c(6, 5, 7), las = 2)
+# add points
+stripchart(Sepal.Length ~ Species, vertical = TRUE, data = iris, method = "jitter", add = TRUE, pch = c(1, 2, 3), at = 1:3)
+stripchart(Sepal.Width ~ Species, vertical = TRUE, data = iris, method = "jitter", add = TRUE, pch = c(1, 2, 3), at = 4:6)
+stripchart(Petal.Length ~ Species, vertical = TRUE, data = iris, method = "jitter", add = TRUE, pch = c(1, 2, 3), at = 7:9)
+stripchart(Petal.Width ~ Species, vertical = TRUE, data = iris, method = "jitter", add = TRUE, pch = c(1, 2, 3), at = 10:12)
+# add text
+text(2, 9.5, labels = "Sepal.Length")
+text(5, 9.5, labels = "Sepal.Width")
+text(8, 9.5, labels = "Petal.Length")
+text(11, 9.5, labels = "Petal.Width")
+text(2, 8.75, labels = "________")
+text(5, 8.75, labels = "________")
+text(8, 8.75, labels = "________")
+text(11, 8.75, labels = "________")
 ```
  
- 
+ ![image of boxplot](https://www.homeworkhelponline.net/images/Rseries/R-base-plot-boxplots-iris-big.jpg)
 
 # Histogram
 The data can also be analysed by the use of a histogram
@@ -396,6 +415,7 @@ http://rstudio-pubs-static.s3.amazonaws.com/321676_20be34434fe44ed2b229eadeabe0e
 http://www.lac.inpe.br/~rafael.santos/Docs/R/CAP394/WholeStory-Iris.html
 https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html
 https://scikit-learn.org/stable/auto_examples/linear_model/plot_iris_logistic.html#sphx-glr-auto-examples-linear-model-plot-iris-logistic-py
+https://www.homeworkhelponline.net/blog/programming/base-r-boxplot-example
 
 Images: http://www.lac.inpe.br/~rafael.santos/Docs/R/CAP394/WholeStory-Iris.html
 
