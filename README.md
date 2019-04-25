@@ -5,6 +5,7 @@ The Iris flower data set is a set of infomation that was made by the satastician
 
 ![iris](iris/irises.pgn)
 
+
 The length and width of the sepals and petals were measured in centimeters and the data was added in a table (fig 2). The table was split into 6 colums that included the "Dataset Order", "Sepal length (cm)",  "Sepal width (cm)", "Petal length (cm)", "Petal width (cm)" and "Flower Species". The result of all the data collected was a linear model that was able tell apart the different species from each other. 
 Fisher's Iris Data 
 
